@@ -1,0 +1,129 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 1,
+    "passes": 0,
+    "pending": 0,
+    "failures": 1,
+    "start": "2023-04-14T06:34:02.672Z",
+    "end": "2023-04-14T06:34:03.295Z",
+    "duration": 623,
+    "testsRegistered": 1,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "d796a925-3479-4e8a-ab67-8eb9b523295c",
+      "title": "",
+      "fullFile": "cypress/e2e/authenticator.cy.js",
+      "file": "cypress/e2e/authenticator.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "e1bf25b2-a0ab-4409-838f-a17d67814a80",
+          "title": "Authenticator:",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "d7ac5870-d38e-410e-8dae-ec130213932f",
+              "title": "Sign In:",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "allows a user to signin",
+                  "fullTitle": "Authenticator: Sign In: allows a user to signin",
+                  "timedOut": null,
+                  "duration": 530,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": null,
+                  "code": "// Step 2: Take an action (Sign in)\ncy.get(selectors.usernameInput).type(\"testuser\");\ncy.get(selectors.signInPasswordInput).type(\"1234uiop\");\ncy.get(selectors.signInButton).contains('Sign in').click();\ncy.wait(3000);\n// Step 3: Make an assertion (Check for sign-out text)\ncy.get(selectors.signOutButton).contains('Sign out');",
+                  "err": {
+                    "message": "CypressError: `cy.visit()` failed trying to load:\n\n/\n\nWe failed looking for this file at the path:\n\n/home/ubuntu/environment/projectest/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Authenticator:`",
+                    "estack": "CypressError: `cy.visit()` failed trying to load:\n\n/\n\nWe failed looking for this file at the path:\n\n/home/ubuntu/environment/projectest/\n\nThe internal Cypress web server responded with:\n\n  > 404: Not Found\n\nBecause this error occurred during a `before each` hook we are skipping the remaining tests in the current suite: `Authenticator:`\n    at <unknown> (http://localhost:46553/__cypress/runner/cypress_runner.js:138236:84)\n    at visitFailedByErr (http://localhost:46553/__cypress/runner/cypress_runner.js:137644:12)\n    at <unknown> (http://localhost:46553/__cypress/runner/cypress_runner.js:138219:13)\n    at tryCatcher (http://localhost:46553/__cypress/runner/cypress_runner.js:8914:23)\n    at Promise._settlePromiseFromHandler (http://localhost:46553/__cypress/runner/cypress_runner.js:6849:31)\n    at Promise._settlePromise (http://localhost:46553/__cypress/runner/cypress_runner.js:6906:18)\n    at Promise._settlePromise0 (http://localhost:46553/__cypress/runner/cypress_runner.js:6951:10)\n    at Promise._settlePromises (http://localhost:46553/__cypress/runner/cypress_runner.js:7027:18)\n    at _drainQueueStep (http://localhost:46553/__cypress/runner/cypress_runner.js:3621:12)\n    at _drainQueue (http://localhost:46553/__cypress/runner/cypress_runner.js:3614:9)\n    at ../../node_modules/bluebird/js/release/async.js.Async._drainQueues (http://localhost:46553/__cypress/runner/cypress_runner.js:3630:5)\n    at Async.drainQueues (http://localhost:46553/__cypress/runner/cypress_runner.js:3500:14)\nFrom Your Spec Code:\n    at Context.eval (webpack:///./cypress/e2e/authenticator.cy.js:4:7)",
+                    "diff": null
+                  },
+                  "uuid": "228a1f9a-f70b-42e9-9249-7bd6a715433c",
+                  "parentUUID": "d7ac5870-d38e-410e-8dae-ec130213932f",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "228a1f9a-f70b-42e9-9249-7bd6a715433c"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 530,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/report/mochawesome-report",
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "timestamp": "mmddyyy_HHMMss"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

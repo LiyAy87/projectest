@@ -103,5 +103,6 @@ const App = ({ signOut }) => {
     </View>
   );
 };
+//prueba
 
-export default withAuthenticator(App);
+export default App;
