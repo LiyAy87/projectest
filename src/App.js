@@ -103,6 +103,6 @@ const App = ({ signOut }) => {
     </View>
   );
 };
-//prueba
+
 
 export default App;
