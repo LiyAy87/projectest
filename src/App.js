@@ -10,8 +10,11 @@ import {
   TextField,
   View,
   withAuthenticator,
-  ThemeProvider,
 } from "@aws-amplify/ui-react";
+import { Amplify } from 'aws-amplify'; 
+import { AmplifyProvider } from '@aws-amplify/ui-react'; 
+import config from './aws-exports'; 
+Amplify.configure(config)
 import { listNotes } from "./graphql/queries";
 import {
   createNote as createNoteMutation,
